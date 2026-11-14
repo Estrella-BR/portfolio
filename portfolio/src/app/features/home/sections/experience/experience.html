@@ -1,0 +1,33 @@
+<section id="experience">
+    <div class="container">
+
+    <app-section-title
+        number="03"
+        label="Experience"
+        title="Where I've worked"
+    />
+
+    @for (experience of experiences; track experience.company) {
+        <article class="experience-card">
+
+        <div class="experience-header">
+            <div>
+            <h3>{{ experience.company }}</h3>
+            <p>{{ experience.position }}</p>
+            <span>{{ experience.department }}</span>
+            </div>
+
+            <span class="period">{{ experience.period }}</span>
+        </div>
+
+        <p class="description">
+            {{ experience.description }}
+        </p>
+
+        <app-tag-list [tags]="experience.technologies" />
+
+        </article>
+    }
+
+    </div>
+</section>

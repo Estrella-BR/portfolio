@@ -1,0 +1,17 @@
+<section id="projects">
+    <div class="container">
+
+    <app-section-title
+        number="04"
+        label="Projects"
+        title="Some things I've built"
+    />
+
+    <div class="projects-grid">
+        @for (project of projects; track project.id) {
+        <app-project-card [project]="project" />
+        }
+    </div>
+
+    </div>
+</section>

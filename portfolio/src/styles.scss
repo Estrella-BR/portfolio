@@ -1,0 +1,86 @@
+
+:root {
+  --bg: #171516;
+  --surface: #242021;
+  --wine: #722F42;
+  --wine-light: #A34F66;
+  --text: #E8E1DE;
+  --muted: #A69B9B;
+  --border: #383133;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1000px, 88%);
+  margin-inline: auto;
+}
+
+section {
+  padding: 85px 0;
+  border-top: 1px solid var(--border);
+}
+
+.section-heading {
+  margin-bottom: 30px;
+}
+
+.section-label {
+  color: var(--wine-light);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.section-heading h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 13px 20px;
+  border-radius: 5px;
+  font-size: 13px;
+  transition: .2s;
+}
+
+.btn-primary {
+  background: var(--wine);
+  color: white;
+
+  &:hover {
+    background: var(--wine-light);
+  }
+}
+
+.btn-secondary {
+  border: 1px solid var(--border);
+  color: var(--text);
+
+  &:hover {
+    border-color: var(--wine-light);
+  }
+}

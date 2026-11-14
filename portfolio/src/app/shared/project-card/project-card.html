@@ -1,0 +1,41 @@
+ <article class="project-card">
+
+      <div class="project-header">
+        <span class="project-number">
+          {{ project().id.toString().padStart(2, '0') }}
+        </span>
+
+        @if (project().featured) {
+          <span class="featured">Featured</span>
+        }
+      </div>
+
+      <h3>{{ project().name }}</h3>
+
+      <p class="description">
+        {{ project().description }}
+      </p>
+
+      <app-tag-list [tags]="project().technologies" />
+
+      <div class="project-links">
+        @if (project().githubUrl) {
+          <a
+            [href]="project().githubUrl"
+            target="_blank"
+            rel="noopener noreferrer">
+            GitHub ↗
+          </a>
+        }
+
+        @if (project().demoUrl) {
+          <a
+            [href]="project().demoUrl"
+            target="_blank"
+            rel="noopener noreferrer">
+            Live demo ↗
+          </a>
+        }
+      </div>
+
+    </article>

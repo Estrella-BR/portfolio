@@ -1,0 +1,21 @@
+<section id="about">
+    <div class="container">
+
+    <app-section-title
+        number="01"
+        label="About"
+        title="A little about me"
+    />
+
+    <p class="about-description">
+        {{ portfolio.about }}
+    </p>
+
+    <div class="education">
+        <h3>{{ portfolio.education.degree }}</h3>
+        <p>{{ portfolio.education.institution }}</p>
+        <span>{{ portfolio.education.period }}</span>
+    </div>
+
+    </div>
+</section>

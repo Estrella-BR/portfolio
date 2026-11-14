@@ -1,0 +1,54 @@
+
+.project-card {
+  height: 100%;
+  padding: 25px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: border-color 0.2s, transform 0.2s;
+
+  &:hover {
+    border-color: var(--wine-light);
+    transform: translateY(-3px);
+  }
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-number {
+  color: var(--wine-light);
+  font-size: 12px;
+}
+
+.featured {
+  color: #D49AA8;
+  font-size: 11px;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 22px 0 12px;
+}
+
+.description {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+  min-height: 70px;
+  margin-bottom: 18px;
+}
+
+.project-links {
+  display: flex;
+  gap: 18px;
+  margin-top: 22px;
+
+  a {
+    color: var(--wine-light);
+    font-size: 12px;
+  }
+}

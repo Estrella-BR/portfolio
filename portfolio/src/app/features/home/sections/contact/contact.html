@@ -1,0 +1,35 @@
+<section id="contact">
+    <div class="container">
+
+    <app-section-title
+        number="05"
+        label="Contact"
+        title="Let's work together."
+    />
+
+    <p class="description">
+        I'm currently looking for opportunities
+        to grow as a software developer.
+    </p>
+
+    <a [href]="'mailto:' + portfolio.email"
+        class="btn-primary">
+        Send me an email ↗
+    </a>
+
+    <div class="social-links">
+        <a [href]="portfolio.github"
+            target="_blank"
+            rel="noopener noreferrer">
+        GitHub ↗
+        </a>
+
+        <a [href]="portfolio.linkedin"
+            target="_blank"
+            rel="noopener noreferrer">
+        LinkedIn ↗
+        </a>
+    </div>
+
+    </div>
+</section>

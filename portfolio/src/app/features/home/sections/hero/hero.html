@@ -1,0 +1,28 @@
+<section id="home" class="hero">
+    <div class="container">
+
+    <span class="availability">
+        <span class="dot"></span>
+        Open to opportunities
+    </span>
+
+    <h1>Hi, I'm {{ portfolio.name }}.</h1>
+
+    <h2>{{ portfolio.role }}</h2>
+
+    <p>{{ portfolio.introduction }}</p>
+
+    <div class="hero-actions">
+        <a href="#projects" class="btn-primary">
+        View projects
+        </a>
+
+        <a [href]="portfolio.cvUrl"
+            class="btn-secondary"
+            download>
+        Download CV ↓
+        </a>
+    </div>
+
+    </div>
+</section>

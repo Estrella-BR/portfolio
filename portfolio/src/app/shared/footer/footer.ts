@@ -1,12 +1,38 @@
 import { Component } from '@angular/core';
-import { PORTFOLIO } from '../../core/data/portfolio';
+
 @Component({
-  imports: [],
   selector: 'app-footer',
-  styleUrl: './footer.scss',
+  standalone: true,
   templateUrl: './footer.html',
+  styleUrl: './footer.scss'
 })
 export class Footer {
-  portfolio = PORTFOLIO;
+
   currentYear = new Date().getFullYear();
+
+  navLinks = [
+    { label: 'Home', href: '#home' },
+    { label: 'About', href: '#about' },
+    { label: 'Experience', href: '#experience' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Contact', href: '#contact' }
+  ];
+
+  socialLinks = [
+    {
+      label: 'GitHub',
+      url: 'https://github.com/Estrella-BR'
+    },
+    {
+      label: 'LinkedIn',
+      url: 'https://www.linkedin.com/'
+    }
+  ];
+
+  scrollToTop(): void {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
 }

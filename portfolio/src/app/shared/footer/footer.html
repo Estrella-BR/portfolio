@@ -1,6 +1,74 @@
-<footer>
-    <div class="container footer-content">
-    <span>© {{ currentYear }} - {{ portfolio.name }}</span>
-    <span>Built with Angular</span>
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- Main footer -->
+    <div class="footer-main">
+
+      <div class="footer-brand">
+
+        <a href="#home" class="logo">
+          EBR
+        </a>
+
+        <p>
+          New to the industry, serious about the craft.
+        </p>
+
+      </div>
+
+      <!-- Navigation -->
+      <div class="footer-navigation">
+
+        <h3>Navigation</h3>
+
+        @for (link of navLinks; track link.href) {
+          <a [href]="link.href">
+            {{ link.label }}
+          </a>
+        }
+
+      </div>
+
+      <!-- Social links -->
+      <div class="footer-social">
+
+        <h3>Find me on</h3>
+
+        @for (social of socialLinks; track social.label) {
+          <a
+            [href]="social.url"
+            target="_blank"
+            rel="noopener noreferrer">
+            {{ social.label }} ↗
+          </a>
+        }
+
+      </div>
+
     </div>
+
+    <!-- Bottom footer -->
+    <div class="footer-bottom">
+
+      <p>
+        © {{ currentYear }} Estrella Blanco. All rights reserved.
+      </p>
+
+      <span class="footer-note">
+        Designed & built with <span class="heart">♥</span>
+        and Angular
+      </span>
+
+      <button
+        class="back-to-top"
+        (click)="scrollToTop()"
+        aria-label="Back to top">
+        ↑
+      </button>
+
+    </div>
+
+  </div>
+
 </footer>

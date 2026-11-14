@@ -17,11 +17,13 @@
     <div class="modal-header">
       <span class="project-number">
         PROJECT {{ project().id.toString().padStart(2, '0') }}
+
+        
+      @if (project().year) {
+        - {{ project().year }} 
+      }
       </span>
 
-      @if (project().year) {
-        <span class="project-year">{{ project().year }}</span>
-      }
     </div>
 
     <h2>{{ project().name }}</h2>

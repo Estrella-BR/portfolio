@@ -1,11 +1,12 @@
 import { Component, input, output } from '@angular/core';
 import { Project } from '../../core/models/project';
 import { TagList } from '../tag-list/tag-list';
+import { Video } from '../../features/home/sections/video/video';
 
 @Component({
   selector: 'app-project-details',
   standalone: true,
-  imports: [TagList],
+  imports: [TagList, Video],
   templateUrl: './project-detail.html',
   styleUrl: './project-detail.scss'
 })

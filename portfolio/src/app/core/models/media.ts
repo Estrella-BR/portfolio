@@ -1,6 +1,6 @@
 
 export interface Media {
-  type: 'image' | 'video';
+  type: 'image' | 'yt' | 'document';
   url: string;
   alt?: string;
   caption?: string;

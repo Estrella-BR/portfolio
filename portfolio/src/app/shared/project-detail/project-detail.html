@@ -52,20 +52,17 @@
               </figure>
             }
 
-            @if (item.type === 'video') {
-              <figure class="media-item video-item">
-                <video
-                  controls
-                  preload="metadata"
-                  [poster]="item.poster || ''">
-                  <source [src]="item.url" type="video/mp4">
-                  Your browser does not support video playback.
-                </video>
+            @if (item.type === 'yt') {
+             <figure class="media-item video-item">
+                <app-video
+                [id] = "item.url"
+                />
 
                 @if (item.caption) {
                   <figcaption>{{ item.caption }}</figcaption>
                 }
               </figure>
+              
             }
 
           }

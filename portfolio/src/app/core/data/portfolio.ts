@@ -87,13 +87,12 @@ export const PROJECTS: Project[] = [
       'Web Scraping'
     ],
 
-    role: 'Full-stack development. I designed and implemented the frontend, backend and product data collection.',
+    role: 'Full-stack development. I designed and implemented the frontend, backend and product data scraping.',
 
     year: 2026,
 
     features: [
       'Product search and filtering',
-      'Price comparison between supermarkets',
       'Pagination and sorting',
       'Automated product data collection'
     ],
@@ -118,7 +117,7 @@ export const PROJECTS: Project[] = [
         caption: 'Product comparison'
       },
       {
-        type: 'video',
+        type: 'yt',
         url: 'assets/projects/shop/demo.mp4',
         poster: 'assets/projects/shop/video-cover.png',
         caption: 'Application demonstration'
@@ -178,33 +177,8 @@ export const PROJECTS: Project[] = [
 
     media: [
       {
-        type: 'image',
-        url: 'assets/projects/emotional-tracking/login.png',
-        alt: 'Application login screen',
-        caption: 'Login interface'
-      },
-      {
-        type: 'image',
-        url: 'assets/projects/emotional-tracking/calendar.png',
-        alt: 'Emotional tracking calendar',
-        caption: 'Emotional records calendar'
-      },
-      {
-        type: 'image',
-        url: 'assets/projects/emotional-tracking/charts.png',
-        alt: 'Emotional statistics',
-        caption: 'Mood statistics and charts'
-      },
-      {
-        type: 'image',
-        url: 'assets/projects/emotional-tracking/professional.png',
-        alt: 'Professional dashboard',
-        caption: 'Professional interface'
-      },
-      {
-        type: 'video',
-        url: 'assets/projects/emotional-tracking/demo.mp4',
-        poster: 'assets/projects/emotional-tracking/video-cover.png',
+        type: 'yt',
+        url: 'fndJ_DzHOzE',
         caption: 'Application demonstration'
       }
     ],

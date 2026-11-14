@@ -1,3 +1,12 @@
 .social-links{
     margin-top: 1rem;
+    
+  a{
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--wine);
+    }
+  }
 }

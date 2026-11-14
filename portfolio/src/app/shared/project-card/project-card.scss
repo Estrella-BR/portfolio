@@ -50,6 +50,9 @@ h3 {
   a {
     color: var(--wine-light);
     font-size: 12px;
+    &:hover{
+      color: var(--muted);
+    }
   }
 }
 

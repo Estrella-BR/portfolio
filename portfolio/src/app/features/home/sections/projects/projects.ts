@@ -11,5 +11,4 @@ import { SectionTitle } from '../../../../shared/section-title/section-title';
 })
 export class Projects {
     projects = PROJECTS;
-
 }

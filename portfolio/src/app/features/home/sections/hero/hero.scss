@@ -1,0 +1,152 @@
+
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  padding: 45px 0;
+  background: var(--cream);
+}
+.hero-description {
+  max-width: 700px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 2;
+}
+
+.hero-top,
+.hero-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.availability,
+.location,
+.hero-bottom {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--burgundy);
+}
+
+.availability {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #718B69;
+  border-radius: 50%;
+}
+
+.hero-content {
+  padding: 115px 0 100px;
+  max-width: 850px;
+}
+
+.eyebrow {
+  color: var(--burgundy);
+  font-size: 13px;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+}
+
+h1 {
+  color: var(--wine);
+  font-size: clamp(52px, 8vw, 100px);
+  line-height: 1.08;
+  letter-spacing: -3px;
+}
+
+h1 em {
+  color: var(--rose);
+  font-weight: 400;
+}
+
+.description {
+  max-width: 470px;
+  margin-top: 30px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 15px 25px;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background: var(--wine);
+  color: var(--cream);
+}
+
+.primary-btn:hover {
+  background: var(--burgundy);
+  transform: translateY(-3px);
+}
+
+.secondary-btn {
+  color: var(--wine);
+  border-bottom: 1px solid var(--wine);
+}
+
+.hero-tech {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 65px;
+}
+
+.hero-tech span {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--burgundy);
+}
+
+.hero-bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 25px;
+}
+
+.hero-bottom a:hover {
+  color: var(--rose);
+}
+
+@media (max-width: 600px) {
+  .hero-content {
+    padding: 90px 0;
+  }
+
+  h1 {
+    letter-spacing: -2px;
+  }
+
+  .hero-top .location {
+    display: none;
+  }
+
+  .hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero-tech {
+    gap: 15px;
+  }
+
+  .hero-bottom {
+    font-size: 8px;
+  }
+}

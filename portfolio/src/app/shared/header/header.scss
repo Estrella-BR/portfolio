@@ -1,0 +1,157 @@
+:host {
+  display: block;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+  background: rgba(18, 17, 18, 0.88);
+  backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.header-container {
+  max-width: 1200px;
+  height: 75px;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Logo
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  color: #f5f0f2;
+  font-size: 21px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: -1px;
+
+  .logo-bracket {
+    color: #a34d68;
+  }
+}
+
+// Desktop navigation
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+
+  a {
+    position: relative;
+    color: #aaa;
+    font-size: 13px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 0;
+      height: 2px;
+      background: #a34d68;
+      transition: width 0.2s ease;
+    }
+
+    &:hover {
+      color: #fff;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Mobile menu button
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+
+  width: 38px;
+  height: 38px;
+
+  border: 1px solid #393238;
+  border-radius: 6px;
+  background: transparent;
+
+  cursor: pointer;
+
+  span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    margin: 0 auto;
+
+    background: #d18ba0;
+    transition: 0.2s ease;
+  }
+}
+
+// Mobile navigation
+
+.mobile-nav {
+  display: none;
+}
+
+// Responsive
+
+@media (max-width: 768px) {
+
+  .header-container {
+    height: 65px;
+    padding: 0 20px;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    padding: 10px 20px 20px;
+
+    background: #121112;
+    border-top: 1px solid #302930;
+
+    a {
+      padding: 14px 5px;
+
+      color: #aaa;
+      font-size: 14px;
+      text-decoration: none;
+
+      border-bottom: 1px solid #292429;
+
+      &:hover {
+        color: #d18ba0;
+      }
+    }
+  }
+}

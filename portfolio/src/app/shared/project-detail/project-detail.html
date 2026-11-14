@@ -1,0 +1,141 @@
+<div class="modal-overlay" (click)="closeModal()">
+
+  <article
+    class="project-modal"
+    (click)="$event.stopPropagation()"
+    role="dialog"
+    aria-modal="true"
+    [attr.aria-label]="project().name + ' project details'">
+
+    <button
+      class="close-button"
+      (click)="closeModal()"
+      aria-label="Close project details">
+      &times;
+    </button>
+
+    <div class="modal-header">
+      <span class="project-number">
+        PROJECT {{ project().id.toString().padStart(2, '0') }}
+      </span>
+
+      @if (project().year) {
+        <span class="project-year">{{ project().year }}</span>
+      }
+    </div>
+
+    <h2>{{ project().name }}</h2>
+
+    <p class="long-description">
+      {{ project().longDescription || project().description }}
+    </p>
+
+    <!-- Media gallery -->
+    @if (project().media?.length) {
+      <section class="media-section">
+        <h3>Project showcase</h3>
+
+        <div class="media-gallery">
+
+          @for (item of project().media; track item.url) {
+
+            @if (item.type === 'image') {
+              <figure class="media-item">
+                <img
+                  [src]="item.url"
+                  [alt]="item.alt || project().name"
+                  loading="lazy">
+
+                @if (item.caption) {
+                  <figcaption>{{ item.caption }}</figcaption>
+                }
+              </figure>
+            }
+
+            @if (item.type === 'video') {
+              <figure class="media-item video-item">
+                <video
+                  controls
+                  preload="metadata"
+                  [poster]="item.poster || ''">
+                  <source [src]="item.url" type="video/mp4">
+                  Your browser does not support video playback.
+                </video>
+
+                @if (item.caption) {
+                  <figcaption>{{ item.caption }}</figcaption>
+                }
+              </figure>
+            }
+
+          }
+
+        </div>
+      </section>
+    }
+
+    <!-- Your role -->
+    @if (project().role) {
+      <section class="details-section">
+        <h3>My contribution</h3>
+        <p>{{ project().role }}</p>
+      </section>
+    }
+
+    <!-- Features -->
+    @if (project().features?.length) {
+      <section class="details-section">
+        <h3>Key features</h3>
+
+        <ul>
+          @for (feature of project().features; track feature) {
+            <li>{{ feature }}</li>
+          }
+        </ul>
+      </section>
+    }
+
+    <!-- Challenges -->
+    @if (project().challenges?.length) {
+      <section class="details-section">
+        <h3>Challenges & learning</h3>
+
+        <ul>
+          @for (challenge of project().challenges; track challenge) {
+            <li>{{ challenge }}</li>
+          }
+        </ul>
+      </section>
+    }
+
+    <!-- Technologies -->
+    <section class="details-section">
+      <h3>Technologies</h3>
+      <app-tag-list [tags]="project().technologies" />
+    </section>
+
+    <!-- Links -->
+    <div class="modal-links">
+
+      @if (project().githubUrl) {
+        <a
+          [href]="project().githubUrl"
+          target="_blank"
+          rel="noopener noreferrer">
+          GitHub ↗
+        </a>
+      }
+
+      @if (project().demoUrl) {
+        <a
+          [href]="project().demoUrl"
+          target="_blank"
+          rel="noopener noreferrer">
+          Live demo ↗
+        </a>
+      }
+
+    </div>
+
+  </article>
+</div>

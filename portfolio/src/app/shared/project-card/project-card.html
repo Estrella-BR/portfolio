@@ -1,41 +1,53 @@
- <article class="project-card">
+<article class="project-card">
 
-      <div class="project-header">
-        <span class="project-number">
-          {{ project().id.toString().padStart(2, '0') }}
-        </span>
+  <div class="project-header">
+    <span class="project-number">
+      {{ project().id.toString().padStart(2, '0') }}
+    </span>
 
-        @if (project().featured) {
-          <span class="featured">Featured</span>
-        }
-      </div>
+    @if (project().featured) {
+      <span class="featured">Featured</span>
+    }
+  </div>
 
-      <h3>{{ project().name }}</h3>
+  <h3>{{ project().name }}</h3>
 
-      <p class="description">
-        {{ project().description }}
-      </p>
+  <p class="description">
+    {{ project().description }}
+  </p>
 
-      <app-tag-list [tags]="project().technologies" />
+  <app-tag-list [tags]="project().technologies" />
 
-      <div class="project-links">
-        @if (project().githubUrl) {
-          <a
-            [href]="project().githubUrl"
-            target="_blank"
-            rel="noopener noreferrer">
-            GitHub ↗
-          </a>
-        }
+  <div class="project-links">
 
-        @if (project().demoUrl) {
-          <a
-            [href]="project().demoUrl"
-            target="_blank"
-            rel="noopener noreferrer">
-            Live demo ↗
-          </a>
-        }
-      </div>
+    @if (project().githubUrl) {
+      <a [href]="project().githubUrl"
+         target="_blank"
+         rel="noopener noreferrer">
+        GitHub ↗
+      </a>
+    }
 
-    </article>
+    @if (project().demoUrl) {
+      <a [href]="project().demoUrl"
+         target="_blank"
+         rel="noopener noreferrer">
+        Live demo ↗
+      </a>
+    }
+
+  </div>
+
+  <button
+    class="details-button"
+    (click)="showDetails.set(true)">
+    Explore project <span>↗</span>
+  </button>
+
+</article>
+
+@if (showDetails()) {
+  <app-project-details
+    [project]="project()"
+    (close)="showDetails.set(false)" />
+}

@@ -52,3 +52,26 @@ h3 {
     font-size: 12px;
   }
 }
+
+.details-button {
+  margin-top: 24px;
+  padding: 10px 0;
+
+  border: none;
+  border-bottom: 1px solid #722f45;
+  background: transparent;
+
+  color: #d18ba0;
+  font: inherit;
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+
+  span {
+    margin-left: 8px;
+  }
+
+  &:hover {
+    color: white;
+  }
+}

@@ -1,0 +1,179 @@
+:host {
+  --accent: #722f45;
+  --accent-light: #a34d68;
+
+  display: contents;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(8px);
+
+  overflow-y: auto;
+}
+
+.project-modal {
+  position: relative;
+  width: 100%;
+  max-width: 850px;
+  max-height: 90vh;
+  overflow-y: auto;
+
+  padding: 40px;
+  border: 1px solid #343034;
+  border-radius: 12px;
+
+  background: #171517;
+  color: #f5f0f2;
+
+  animation: appear 0.25s ease;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+
+  border: none;
+  background: none;
+  color: #aaa;
+  font-size: 30px;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  color: var(--accent-light);
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+h2 {
+  margin-bottom: 16px;
+  font-size: clamp(28px, 5vw, 40px);
+}
+
+h3 {
+  margin-bottom: 18px;
+  font-size: 17px;
+}
+
+.long-description,
+.details-section p {
+  color: #aaa;
+  line-height: 1.8;
+}
+
+.media-section,
+.details-section {
+  margin-top: 36px;
+}
+
+.media-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.media-item {
+  margin: 0;
+  min-width: 0;
+
+  img,
+  video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #242124;
+  }
+
+  figcaption {
+    margin-top: 8px;
+    color: #888;
+    font-size: 12px;
+  }
+}
+
+.video-item {
+  grid-column: 1 / -1;
+
+  video {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+.details-section ul {
+  padding-left: 20px;
+  color: #aaa;
+  line-height: 2;
+
+  li::marker {
+    color: var(--accent-light);
+  }
+}
+
+.modal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 36px;
+
+  a {
+    color: #d18ba0;
+    text-decoration: none;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .modal-overlay {
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  .project-modal {
+    padding: 28px 20px;
+    max-height: 95vh;
+  }
+
+  .media-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .video-item {
+    grid-column: auto;
+  }
+}

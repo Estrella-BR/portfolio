@@ -93,3 +93,27 @@ section {
     border-color: var(--wine-light);
   }
 }
+
+
+youtube-player {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+youtube-player-placeholder {
+  width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: 16 / 9;
+}
+
+youtube-player-placeholder button {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+}
+
+youtube-player iframe {
+  width: 100% !important;
+  height: 100% !important;
+}

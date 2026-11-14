@@ -7,7 +7,7 @@ export const PORTFOLIO = {
   name: 'Estrella',
   surname: 'Blanco Rodríguez',
   role: 'Junior Software Developer',
-
+  phone: '+34 651 076 007',
   email: 'estrellablanro@gmail.com',
   whatsapp: '@Estr3l1a',
   github: 'https://github.com/Estrella-BR',

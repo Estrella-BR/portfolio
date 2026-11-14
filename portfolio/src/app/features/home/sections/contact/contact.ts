@@ -10,4 +10,10 @@ import { SectionTitle } from '../../../../shared/section-title/section-title';
 export class Contact {
     portfolio = PORTFOLIO;
 
+    buildWhatsAppLink(number: string){
+      const cleanPhone = number.replace(/\D/g, '');
+      const base = `https://wa.me/${cleanPhone}`;
+      const message = "Hello I saw your portfolio and I'm interested in talking!"
+      return message ? `${base}?text=${encodeURIComponent(message)}` : base;
+    }
 }

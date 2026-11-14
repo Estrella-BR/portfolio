@@ -106,7 +106,7 @@ export const PROJECTS: Project[] = [
     media: [
       {
         type: 'image',
-        url: 'assets/projects/shop/home.png',
+        url: 'assets/projects/shop/main.png',
         alt: 'Application homepage',
         caption: 'Main application interface'
       },
@@ -117,14 +117,15 @@ export const PROJECTS: Project[] = [
         caption: 'Product comparison'
       },
       {
-        type: 'yt',
-        url: 'assets/projects/shop/demo.mp4',
-        poster: 'assets/projects/shop/video-cover.png',
-        caption: 'Application demonstration'
+        type: 'image',
+        url: 'assets/projects/shop/filters.png',
+        poster: 'assets/projects/shop/filters.png',
+        caption: 'Possible filters'
       }
     ],
 
     githubUrl: 'https://github.com/Estrella-BR/project-shop',
+    demoUrl: 'https://shop-project-ebr.netlify.app',
     featured: true
   },
   {
@@ -183,7 +184,7 @@ export const PROJECTS: Project[] = [
       }
     ],
 
-    githubUrl: '',
+    githubUrl: 'https://github.com/St3l1a/Tfg-Back',
     featured: true
   }
 ];
